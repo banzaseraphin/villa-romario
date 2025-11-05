@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="sw">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Villa Romario Nyumba ya Wageni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css"/>
+  <link rel="stylesheet" href="./styles/style.css"/>  
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Villa Romario</div>
+      <nav class="nav-links">
+        <a href="index-sw.html">Nyumbani</a>
+        <a href="#rooms">Vyumba</a>
+        <a href="#about">Kuhusu</a>
+        <a href="#contact">Wasiliana</a>
+      </nav>
+      <div class="lang-menu">
+        <select onchange="window.location=this.value;">
+          <option value="index.html">English</option>
+          <option value="index-fr.html">Français</option>
+          <option value="index-sw.html" selected>Kiswahili</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 style="font-family:Playfair Display,serif;font-size:34px;margin:0 0 10px">Karibu Villa Romario Nyumba ya Wageni</h1>
+      <p>Pumzika na ufurahie ukaaji wako katika nyumba yetu ya wageni ya kisasa, yenye starehe na bei nafuu.</p>
+      <form class="booking" onsubmit="event.preventDefault();alert('Ukaguzi wa upatikanaji wa majaribio');">
+        <input type="date" placeholder="Tarehe ya kuwasili">
+        <input type="date" placeholder="Tarehe ya kuondoka">
+        <select><option>Mtu 1</option><option>Watu 2</option></select>
+        <select><option>Mtoto 0</option><option>Mtoto 1</option></select>
+        <button class="btn" onclick="window.open('https://wa.me/243971230587?text=Hello%2C%20I%20want%20to%20check%20availability', '_blank')">
+            Angalia Upatikanaji
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section">
+      <div class="welcome">
+        <h2>Karibu Villa Romario</h2>
+        <p>Tunakupa starehe, utulivu, na hisia za nyumbani wakati wa ukaaji wako. Nyumba yetu ya wageni inaunganisha urahisi na ubora kwa huduma bora zaidi mjini.</p>
+        <div class="features">
+          <div class="feature"><img src="/mnt/data/1762324519053.jpeg" alt="Mandhari nzuri"><div class="caption">Mandhari nzuri</div></div>
+          <div class="feature"><img src="/mnt/data/1762324519053.jpeg" alt="Chumba kikubwa"><div class="caption">Chumba kikubwa</div></div>
+          <div class="feature"><img src="/mnt/data/1762324519053.jpeg" alt="Afya na starehe"><div class="caption">Afya na starehe</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rooms" class="section">
+      <div class="rooms">
+        <div class="room">
+          <div class="thumb"><img src="/mnt/data/1762324519053.jpeg" alt="Chumba cha kawaida" style="width:100%;border-radius:8px"><div class="price-badge">50$<br><small>kwa usiku</small></div></div>
+          <div><h3>Chumba cha Kawaida</h3><p>Kina starehe na vifaa vyote muhimu kwa ukaaji wa kupumzika.</p></div>
+        </div>
+        <div class="room">
+          <div><h3>Chumba cha Deluxe</h3><p>Kikubwa na kimepambwa kwa uzuri ili kuongeza faraja yako.</p></div>
+          <div class="thumb"><img src="/mnt/data/1762324519053.jpeg" alt="Chumba cha Deluxe" style="width:100%;border-radius:8px"><div class="price-badge">50$<br><small>kwa usiku</small></div></div>
+        </div>
+        <div class="room">
+          <div class="thumb"><img src="/mnt/data/1762324519053.jpeg" alt="Suite" style="width:100%;border-radius:8px"><div class="price-badge">50$<br><small>kwa usiku</small></div></div>
+          <div><h3>Suite</h3><p>Anasa na starehe vimeunganishwa kwa ukaaji usiosahaulika.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="testimonial">
+        <div class="inner">
+          <blockquote>“Uzoefu bora kabisa wa nyumba ya wageni! Utulivu, usafi, na bei nzuri.”</blockquote>
+          <div><strong>Roberta</strong><br><small>Maoni ya Mgeni</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="customer-feedback" style="padding:50px 20px; background-color:#f9f9f9; text-align:center;">
+        <h2>Maoni ya Wateja</h2>
+
+        <!-- Feedback Form -->
+        <div style="margin:30px auto; max-width:400px; text-align:left;">
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" placeholder="Enter your email" style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+          <label for="comment">Commentaire:</label><br>
+          <textarea id="comment" placeholder="Write your feedback..." style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
+
+          <label>Kadiria huduma zetu:</label>
+          <div id="stars" style="font-size:24px; color:#ccc; cursor:pointer; margin-bottom:10px;">★★★★★</div>
+
+          <button id="submitFeedback" style="padding:10px 20px; background-color:#25D366; color:white; border:none; border-radius:5px; cursor:pointer;">Wasilisha</button>
+        </div>
+
+        <!-- Display Feedback -->
+        <h3>Wateja Wetu Wanasema Nini</h3>
+        <div id="feedbackDisplay" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;"></div>
+    </section>
+
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+        <script src="./scripts/villa.js"></script>
+</body>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Villa Romario Nyumba ya Wageni</h4>
+        <p>Lubumbashi, Mkoa wa Katanga, Jamhuri ya Kidemokrasia ya Kongo<br>info@villaromario.com</p>
+      </div>
+      <div>
+        <h4>Kuhusu</h4>
+        <a href="#">Kuhusu Sisi</a><br><a href="#">Vyumba</a><br><a href="#">Wasiliana</a>
+      </div>
+      <div>
+        <h4>Jarida</h4>
+        <form onsubmit="event.preventDefault();alert('Umejiandikisha!');">
+          <input type="email" placeholder="Barua pepe yako" style="padding:8px;border:none;border-radius:4px;margin-bottom:8px;width:100%">
+          <button class="btn" style="width:100%">Jiandikishe</button>
+        </form>
+      </div>
+    </div>
+    <p style="text-align:center;color:#aaa;margin-top:20px">© 2025 Villa Romario Nyumba ya Wageni</p>
+  </footer>
+</body>
+</html>
