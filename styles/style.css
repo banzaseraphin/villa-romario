@@ -8,6 +8,8 @@
   --maxwidth:1100px;
 }
 
+
+
 *{box-sizing:border-box}
 body{font-family:Montserrat,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
